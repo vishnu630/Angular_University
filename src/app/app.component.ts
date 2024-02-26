@@ -12,5 +12,13 @@ export class AppComponent {
 data={
   title:"Angular Core Deep Dive"
 }
+onLogoClick(){
+  alert("hii logo clicked")
+}
+
+OnTitleChange(newTitle:string){
+  this.data.title=newTitle;
+
+}
 
 }
