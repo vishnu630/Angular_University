@@ -1,7 +1,17 @@
-<div style="text-align: center;">
-<h1>welcome to {{data.title}}!</h1>
+<div class="top-menu">
 
-<img width="300" (click)="onLogoClick()" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg">
+    <img class="logo"
+         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
 </div>
 
-<input class="demo" (keyup)="OnTitleChange(myTitle.value)" [value]='data.title' #myTitle/>
+
+<div class="courses">
+
+    <course-card [course]="coreCourse"></course-card>
+    <course-card [course]="rxjsCourse"></course-card>
+    <course-card [course]="deepCourse"></course-card>
+
+</div>
+
+

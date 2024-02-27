@@ -1,24 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import {COURSES} from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-data={
-  title:"Angular Core Deep Dive"
-}
-onLogoClick(){
-  alert("hii logo clicked")
-}
-
-OnTitleChange(newTitle:string){
-  this.data.title=newTitle;
-
-}
+  @Input()
+  coreCourse: Course = COURSES[0];
+  rxjsCourse: Course = COURSES[1];
+  deepCourse: Course = COURSES[2];
+      
 
 }
